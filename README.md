@@ -29,7 +29,7 @@
 3. 使用命令行进到tolua目录下，使用命令：scons all完成安装，此时，可以看到bin目录下多了2个exe程序，lib目录下多了一个包。
 
 ## 四、使用范例 ##
-上面讲了tolua++的编译，下面使用实际例子讲解一下。首先，正常编写 c++ 代码，这里我们创建一个类
+上面讲了tolua++的编译，下面使用实际例子讲解一下。首先，正常编写 c++ 代码，这里我们创建一个类，更多使用请移步：[https://github.com/dabing1022/Blog/blob/master/tolua/tolua%2B%2B%E4%B8%AD%E6%96%87%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%5B%E5%AE%8C%E6%95%B4%E7%BF%BB%E8%AF%91%5D.md](https://github.com/dabing1022/Blog/blob/master/tolua/tolua%2B%2B%E4%B8%AD%E6%96%87%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C%5B%E5%AE%8C%E6%95%B4%E7%BF%BB%E8%AF%91%5D.md)
  
 **mylib.h**
  
