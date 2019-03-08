@@ -1,0 +1,19 @@
+﻿  tolua.c
+  toluabind.c
+  tolua_event.c
+  tolua_is.c
+f:\git\tolua_add\tolua\src\lib\tolua_is.c(119): warning C4114: 多次使用同一类型限定符
+  tolua_map.c
+f:\git\tolua_add\tolua\src\lib\tolua_map.c(398): warning C4090: “函数”: 不同的“const”限定符
+f:\git\tolua_add\tolua\src\lib\tolua_map.c(395): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  f:\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\git\tolua_add\tolua\src\lib\tolua_map.c(525): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  f:\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+f:\git\tolua_add\tolua\src\lib\tolua_map.c(526): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  f:\windows kits\10\include\10.0.10240.0\ucrt\string.h(255): note: 参见“strncat”的声明
+  tolua_push.c
+  tolua_to.c
+  正在生成代码...
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1216,5): warning MSB8012: TargetPath(F:\git\tolua_add\tolua\win32\vc7\withLua51_Release\toluapp.exe) 与 Linker 的 OutputFile 属性值(F:\git\tolua_add\tolua\bin\tolua++.exe)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(1218,5): warning MSB8012: TargetName(toluapp) 与 Linker 的 OutputFile 属性值(tolua++)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
+  toluapp.vcxproj -> F:\git\tolua_add\tolua\win32\vc7\withLua51_Release\toluapp.exe

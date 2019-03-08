@@ -1,0 +1,10 @@
+$#include "mylib.h"
+class Test
+{
+	Test(int, int);
+	~Test();
+	void sayHello();
+	int add();
+	int getA();
+
+}
