@@ -28,4 +28,73 @@
 2. 修改仓库tolua目录下config_posix.py文件中LIBS=['lua','lualib','m']为LIBS=['lua51']。
 3. 使用命令行进到tolua目录下，使用命令：scons all完成安装，此时，可以看到bin目录下多了2个exe程序，lib目录下多了一个包。
 
+## 四、使用范例 ##
+上面讲了tolua++的编译，下面使用实际例子讲解一下。首先，正常编写 c++ 代码，这里我们创建一个类
+ 
+**mylib.h**
+ 
+    //mylib.h
+    class Test
+    {
+    	public:
+    		Test(int a, int b);
+   			~Test();
+    		void sayHello();
+    		int add();
+    		int getA();
+    
+    	private:
+    		int a;
+    		int b;
+    };
 
+**mylib.cpp**
+
+    //mylib.cpp
+    #include "mylib.h"
+    #include <iostream>
+    
+    Test::Test(int a, int b)
+    {
+    	this->a = a;
+    	this->b = b;
+    }
+    
+    Test::~Test()
+    {
+    }
+    
+    void Test::sayHello()
+    {
+    	std::cout << "hello world" << std::endl;
+    }
+    
+    int Test::add()
+    {
+    	return this->a + this->b;
+    }
+    
+    int Test::getA()
+    {
+    	return this->a;
+    }
+
+**mylib.pkg**
+
+	$#include "mylib.h"
+	class Test
+	{
+	    Test(int, int);
+	    ~Test();
+	    void sayHello();
+	    int add();  
+	    int getA();
+	};
+
+可以看到 package 文件和 c++ 头文件基本一致，要注意的是要在文件头引入头文件，然后把 public 关键字去掉。所有公有的函数或数据都可以导出，如果不想导出某个函数，则在 package 文件中不要定义就可以了。
+
+然后使用命令行进入上诉步骤生成的exe文件的目录，输入：
+
+	tolua++ -n mylib -o tolua.cpp mylib.pkg
+    
+导出的文件名可以任意命名，但因为我们已经有一个原始的源文件 mylib.cpp 了，所以这里不能将导出的源文件命名为 mylib.cpp，否则后面使用的时候就会有问题，这里我命名为 tolua.cpp。还有一个要注意的就是必须把 mylib.h 跟 mylib.pkg 放在一起，因为 package 文件需要用到头文件（最好所有文件都放入同一个文件夹下）
